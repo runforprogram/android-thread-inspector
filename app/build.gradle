@@ -50,10 +50,10 @@ android {
 dependencies {
 
 
-     debugImplementation(Deps.remoteThreadFlipper)
-     debugImplementation(Deps.remoteThreadBhook)
-//    debugImplementation(project(":thread-flipper"))
-//    debugImplementation(project(":thread-bhook"))
+//     debugImplementation(Deps.remoteThreadFlipper)
+//     debugImplementation(Deps.remoteThreadBhook)
+    debugImplementation(project(":thread-flipper"))
+    debugImplementation(project(":thread-bhook"))
 
     debugImplementation(Deps.flipper)
     debugImplementation(Deps.soloader)
