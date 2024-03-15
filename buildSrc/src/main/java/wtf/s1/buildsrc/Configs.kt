@@ -2,14 +2,14 @@ package wtf.s1.buildsrc
 
 object Versions{
     const val applicationId = "wtf.s1.aaa"
-    const val kotlin = "1.5.10"
+    const val kotlin = "1.7.20"
     const val ktx = "1.0.0"
     const val coroutines = "1.5.0"
-    const val gradlePlugin ="7.0.0"
+    const val gradlePlugin ="7.2.2"
     const val lifecycle = "2.2.0"
     const val compileSdkVersion = 31
     const val minSdkVersion = 16
-    const val targetSdkVersion = 31
+    const val targetSdkVersion = 30
     const val versionCode = 1
     const val versionName = "1.0.0"
 }
@@ -53,7 +53,7 @@ object Deps{
     const val soloader = "com.facebook.soloader:soloader:0.9.0"
 
     const val epic = "com.github.tiann:epic:0.11.2"
-    const val bhook = "com.bytedance:bytehook:1.0.3"
+    const val bhook = "com.bytedance:bytehook:1.0.10"
 }
 
 object ClassPaths {

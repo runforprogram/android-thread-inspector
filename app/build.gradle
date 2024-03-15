@@ -2,7 +2,7 @@ import wtf.s1.buildsrc.*
 
 apply plugin: "com.android.application"
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion(Versions.compileSdkVersion)
