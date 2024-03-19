@@ -16,7 +16,7 @@ fun S1Thread.toFlipperObject(): FlipperObject {
         .put("daemon", "${this.isDaemon}")
         .put("alive","${this.isAlive}")
 
-    if (this@toFlipperObject.stackTraces == null) {
+    if (this.stackTraces == null) {
         return builder.build()
     }
 

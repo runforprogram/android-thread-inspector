@@ -16,7 +16,7 @@ object S1ThreadHooker {
 
     const val HOOK_ALL = 0
     const val HOOK_APP = 1
-    private const val DEBUG = false
+    private const val DEBUG = true
     private const val TAG = "thread_hook"
 
     //ugly fixme
@@ -35,6 +35,7 @@ object S1ThreadHooker {
         val sb: StringBuilder = StringBuilder()
         if (nativeStack != null) {
             sb.append(String(nativeStack))
+            Log.i(TAG,"start get trace")
             val stackTrace: Array<StackTraceElement> = Thread.currentThread().stackTrace
             for (s: StackTraceElement in stackTrace) {
                 if (!filterStacktrace(s)) {
@@ -45,12 +46,12 @@ object S1ThreadHooker {
             }
 
             c2stack[cid] = sb.toString()
-            if (c2t.contains(cid)) {
+            if (c2t.containsKey(cid)) {
                 c2t[cid]?.let { tid->
                     updateThread(cid, tid)
                 }
             }
-            if (DEBUG) Log.i(TAG, "catch stacktrace cid = $cid stack = ${stackTrace.size}")
+            if (DEBUG) Log.i(TAG, "catch stacktrace cid = $cid stack = $stackTrace")
         }
     }
 

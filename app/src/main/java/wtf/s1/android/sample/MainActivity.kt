@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.new_thread).setOnClickListener {
-            object: Thread("new thread from click on button"){
+            Log.i(TAG,"start thread")
+            object: Thread("threadFromClick"){
                 override fun run() {
                     super.run()
                     Log.i(TAG, "new thread run")
